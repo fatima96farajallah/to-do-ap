@@ -1,0 +1,133 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html, .root, .viwe {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.root img {
+  width: 46%;
+  height: 23%;
+}
+
+.root h2 {
+  font-size: 50px;
+  margin: 0 auto;
+  color: #554E8F;
+}
+
+.root p {
+  font-size: 30px;
+  text-align: center;
+  max-width: 550px;
+  max-height: 91px;
+  color: #82A0B7;
+}
+
+.root button {
+  position: relative;
+  top: 138px;
+  width: 52%;
+  height: 5%;
+  font-size: 32px;
+  color: #F1F1F1;
+  background: -webkit-gradient(linear, left top, right top, from(#5DE61A), to(#3BAB02));
+  background: linear-gradient(to right, #5DE61A, #3BAB02);
+  border: none;
+  border-radius: 15px;
+}
+
+.hedear {
+  height: 190Px;
+  width: 100%;
+  background: url("../img/image.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.hedear h1 {
+  font-family: sans-serif;
+  color: #F1F1F1;
+  position: relative;
+  top: 40px;
+  padding-left: 25px;
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+.hedear h2 {
+  font-family: sans-serif;
+  color: #F1F1F1;
+  position: relative;
+  top: 30px;
+  padding-left: 25px;
+  font-size: 30px;
+}
+
+.hedear img {
+  position: absolute;
+  right: 25px;
+  top: 50px;
+  width: 10%;
+  height: 5%;
+}
+
+.viwe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.viwe img {
+  width: 30%;
+  height: 20%;
+}
+
+.viwe h2 {
+  font-family: sans-serif;
+  color: #554E8F;
+  font-size: 50px;
+}
+
+.viwe p {
+  font-family: sans-serif;
+  color: #82A0B7;
+  font-size: 30px;
+}
+
+.footer img {
+  width: 30%;
+  height: 20%;
+}
+/*# sourceMappingURL=style.css.map */

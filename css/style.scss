@@ -1,0 +1,118 @@
+
+$colors:(pcolor:#82A0B7 , btncolor :#5DE61A,btn2color:#3BAB02 , textcolor:#F1F1F1 , hedearcolor : #81C7F5 , hedear2color:#3B6BD6 , hintcolor:#554E8F);
+$text-font:sans-serif;
+@mixin style-text {
+    font-family: sans-serif;
+    color: color(textcolor);
+    
+}
+@function color($color) {
+    $color : map-get($map: $colors, $key:$color);
+    @return $color;
+}
+* {
+    box-sizing: border-box;
+}
+body,html,.root, .viwe {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.root {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+    img {
+        width :46%;
+        height : 23%;
+    }
+    h2 {
+        font-size: 50px;
+        margin: 0 auto;
+        color: color(hintcolor);
+    }
+    p {
+        font-size: 30px;
+        text-align: center;
+        max-width: 550px;
+        max-height: 91px;
+        color: color(pcolor);
+        
+    }
+    button {
+        position: relative;
+        top: 138px;
+        width: 52%;
+        height: 5%;
+        font-size: 32px;
+        color: color(textcolor);
+        background: linear-gradient(to right, color(btncolor),color(btn2color));
+        border: none;
+        border-radius:  15px ;
+        
+    }
+}
+
+    
+    .hedear {
+        height: 190Px;
+        width: 100%;
+        background: url('../img/image.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    
+        h1 {
+           @include style-text();
+           position: relative;
+           top:40px;
+           padding-left: 25px; 
+           font-size: 40px;
+           margin: 0 auto;
+        }
+        h2 {
+            @include style-text();
+            position: relative;
+            top: 30px;
+            padding-left: 25px;
+            font-size: 30px;
+        }
+        img {
+            position: absolute;
+            right: 25px; 
+            top: 50px;
+            width: 10%;
+            height: 5%;
+        }
+    }
+    
+    .viwe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            width :30%;
+            height : 20%;
+        }
+        h2 {
+            font-family: $text-font;
+            color: color(hintcolor);
+            font-size: 50px;
+        }
+        p {
+            font-family: $text-font;
+            color: color(pcolor);
+            font-size: 30px;
+        }
+    }
+    .footer {
+        img { 
+            width :30%;
+            height : 20%;
+        }
+    }
+
