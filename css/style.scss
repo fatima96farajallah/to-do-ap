@@ -1,5 +1,5 @@
 
-$colors:(pcolor:#82A0B7 , btncolor :#5DE61A,btn2color:#3BAB02 , textcolor:#F1F1F1 , hedearcolor : #81C7F5 , hedear2color:#3B6BD6 , hintcolor:#554E8F);
+$colors:(pcolor:#82A0B7 , btncolor :#5DE61A,btn2color:#3BAB02 , textcolor:#F1F1F1 , hedearcolor : #81C7F5 , hedear2color:#3B6BD6 , hintcolor:#554E8F, viwecolor:#F9FCFF , spancolor:#F857C3,span2color:#E0139C);
 $text-font:sans-serif;
 @mixin style-text {
     font-family: sans-serif;
@@ -94,6 +94,8 @@ body,html,.root, .viwe {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: color(viwecolor);
+        position: relative;
         img {
             width :30%;
             height : 20%;
@@ -108,11 +110,39 @@ body,html,.root, .viwe {
             color: color(pcolor);
             font-size: 30px;
         }
+       
+        button {
+            span {
+                color: color(textcolor);
+                font-size: 100px;
+                text-align: center;
+                font-family: $text-font;
+            }
+            position: absolute;
+            border: none;
+            bottom:  -60px;
+            border-radius: 53%;
+            background: linear-gradient(to right, color(spancolor),color(span2color));
+            width: 15.3%;
+            cursor: pointer;
+        }
+           
+
+        
     }
     .footer {
-        img { 
-            width :30%;
-            height : 20%;
+        width: 100%;
+        height: 7%;
+        display: flex;
+        button {
+            background: none;
+            border: none;
+            width: 50%;
+            cursor: pointer;
+            img {
+                width: 13%;
+                height: 13%;   
+            }
         }
     }
 
