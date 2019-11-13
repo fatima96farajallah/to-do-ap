@@ -1,5 +1,5 @@
 
-$colors:(pcolor:#82A0B7 , btncolor :#5DE61A,btn2color:#3BAB02 , textcolor:#F1F1F1 , hedearcolor : #81C7F5 , hedear2color:#3B6BD6 , hintcolor:#554E8F, viwecolor:#F9FCFF , spancolor:#F857C3,span2color:#E0139C);
+$colors:(pcolor:#82A0B7 , btncolor :#5DE61A,btn2color:#3BAB02 ,remindercolor:#e0e0e05c, textcolor:#FFFF , hedearcolor : #81C7F5 , hedear2color:#3B6BD6 , hintcolor:#554E8F, viwecolor:#F9FCFF , spancolor:#F857C3,span2color:#E0139C);
 $text-font:sans-serif;
 @mixin style-text {
     font-family: sans-serif;
@@ -13,7 +13,7 @@ $text-font:sans-serif;
 * {
     box-sizing: border-box;
 }
-body,html,.root, .viwe {
+body,html,.root,.viwe {
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -59,12 +59,11 @@ body,html,.root, .viwe {
 
     
     .hedear {
-        height: 190Px;
+        height: 238Px;
         width: 100%;
         background: url('../img/image.png');
         background-repeat: no-repeat;
         background-size: 100%;
-    
         h1 {
            @include style-text();
            position: relative;
@@ -87,8 +86,62 @@ body,html,.root, .viwe {
             width: 10%;
             height: 5%;
         }
+     
     }
-    
+    .reminder {
+        top: -120px;
+        left: 295px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 200px;
+        color: color(textcolor);
+        background-color: color(remindercolor);
+        .closebtn {
+            position: absolute;
+            right: 15px;
+            color: white;
+            font-weight: bold;
+            float: left;
+            font-size: 30px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+          .closebtn:hover {
+            color: black;
+          }
+        h1 {
+            @include style-text();
+            position: relative;
+            top:40px;
+            padding-left: 25px; 
+            font-size: 40px;
+            margin: 0 auto;
+        }
+        h2 {
+            @include style-text();
+            position: relative;
+            top: 30px;
+            padding-left: 25px;
+            font-size: 30px;
+        }
+        h3 {
+            @include style-text();
+            position: relative;
+            top: 20px;
+            padding-left: 25px;
+            font-size: 20px;
+        }
+        img {
+            position: absolute;
+            right: 25px; 
+            top: 50px;
+            width: 15%;
+            height: 25%; 
+        }
+    }
     .viwe {
         display: flex;
         flex-direction: column;
@@ -111,12 +164,13 @@ body,html,.root, .viwe {
             font-size: 30px;
         }
        
-        button {
+        .addbtn {
             span {
                 color: color(textcolor);
                 font-size: 100px;
                 text-align: center;
                 font-family: $text-font;
+                font-weight: bold;
             }
             position: absolute;
             border: none;
@@ -126,9 +180,59 @@ body,html,.root, .viwe {
             width: 15.3%;
             cursor: pointer;
         }
-           
-
-        
+        .alltask {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 20px;
+            .task {
+                display: flex;
+                height: 60px;
+                width: 920px;
+                background-color: color(textcolor);
+                .bordercolor {
+                    border-style: solid;
+                    border-width: 5px;
+                    border-color: yellow;
+                }
+                input {
+                 position: relative;
+                 left: 5px;
+                 top: 15px;
+                 width:50px ;
+                 height:25px ;
+                 border: none;
+                }
+                h2 {
+                    position: relative;
+                    top: -5px;
+                    font-family: $text-font;
+                    color: color(pcolor);
+                    font-size: 25px;
+                    left: 36px;
+                }
+                h1 {
+                    position: relative;
+                    top: -9px;
+                    font-family: $text-font;
+                    left: 80px;
+                }
+                .bell{
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    img {
+                        width: 80px;
+                        height: 40px;
+                        position: relative;
+                        top: 2px;
+                        left: 265px;
+                    }  
+                }
+            }
+        }
     }
     .footer {
         width: 100%;

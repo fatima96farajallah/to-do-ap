@@ -51,7 +51,7 @@ body, html, .root, .viwe {
   width: 52%;
   height: 5%;
   font-size: 32px;
-  color: #F1F1F1;
+  color: #FFFF;
   background: -webkit-gradient(linear, left top, right top, from(#5DE61A), to(#3BAB02));
   background: linear-gradient(to right, #5DE61A, #3BAB02);
   border: none;
@@ -59,7 +59,7 @@ body, html, .root, .viwe {
 }
 
 .hedear {
-  height: 190Px;
+  height: 238Px;
   width: 100%;
   background: url("../img/image.png");
   background-repeat: no-repeat;
@@ -68,7 +68,7 @@ body, html, .root, .viwe {
 
 .hedear h1 {
   font-family: sans-serif;
-  color: #F1F1F1;
+  color: #FFFF;
   position: relative;
   top: 40px;
   padding-left: 25px;
@@ -78,7 +78,7 @@ body, html, .root, .viwe {
 
 .hedear h2 {
   font-family: sans-serif;
-  color: #F1F1F1;
+  color: #FFFF;
   position: relative;
   top: 30px;
   padding-left: 25px;
@@ -91,6 +91,76 @@ body, html, .root, .viwe {
   top: 50px;
   width: 10%;
   height: 5%;
+}
+
+.reminder {
+  top: -120px;
+  left: 295px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 500px;
+  height: 200px;
+  color: #FFFF;
+  background-color: #e0e0e05c;
+}
+
+.reminder .closebtn {
+  position: absolute;
+  right: 15px;
+  color: white;
+  font-weight: bold;
+  float: left;
+  font-size: 30px;
+  line-height: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.reminder .closebtn:hover {
+  color: black;
+}
+
+.reminder h1 {
+  font-family: sans-serif;
+  color: #FFFF;
+  position: relative;
+  top: 40px;
+  padding-left: 25px;
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+.reminder h2 {
+  font-family: sans-serif;
+  color: #FFFF;
+  position: relative;
+  top: 30px;
+  padding-left: 25px;
+  font-size: 30px;
+}
+
+.reminder h3 {
+  font-family: sans-serif;
+  color: #FFFF;
+  position: relative;
+  top: 20px;
+  padding-left: 25px;
+  font-size: 20px;
+}
+
+.reminder img {
+  position: absolute;
+  right: 25px;
+  top: 50px;
+  width: 15%;
+  height: 25%;
 }
 
 .viwe {
@@ -128,7 +198,7 @@ body, html, .root, .viwe {
   font-size: 30px;
 }
 
-.viwe button {
+.viwe .addbtn {
   position: absolute;
   border: none;
   bottom: -60px;
@@ -139,11 +209,82 @@ body, html, .root, .viwe {
   cursor: pointer;
 }
 
-.viwe button span {
-  color: #F1F1F1;
+.viwe .addbtn span {
+  color: #FFFF;
   font-size: 100px;
   text-align: center;
   font-family: sans-serif;
+  font-weight: bold;
+}
+
+.viwe .alltask {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.viwe .alltask .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  width: 920px;
+  background-color: #FFFF;
+}
+
+.viwe .alltask .task .bordercolor {
+  border-style: solid;
+  border-width: 5px;
+  border-color: yellow;
+}
+
+.viwe .alltask .task input {
+  position: relative;
+  left: 5px;
+  top: 15px;
+  width: 50px;
+  height: 25px;
+  border: none;
+}
+
+.viwe .alltask .task h2 {
+  position: relative;
+  top: -5px;
+  font-family: sans-serif;
+  color: #82A0B7;
+  font-size: 25px;
+  left: 36px;
+}
+
+.viwe .alltask .task h1 {
+  position: relative;
+  top: -9px;
+  font-family: sans-serif;
+  left: 80px;
+}
+
+.viwe .alltask .task .bell {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.viwe .alltask .task .bell img {
+  width: 80px;
+  height: 40px;
+  position: relative;
+  top: 2px;
+  left: 265px;
 }
 
 .footer {
